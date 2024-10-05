@@ -1,4 +1,3 @@
-using BepInEx.Logging;
 using Menu.Remix.MixedUI;
 using UnityEngine;
 
@@ -6,11 +5,8 @@ namespace UnshadedCitadel;
 
 public class UnshadedCitadelOptions : OptionInterface
 {
-    private readonly ManualLogSource Logger;
-
-    public UnshadedCitadelOptions(UnshadedCitadel modInstance, ManualLogSource loggerSource)
+    public UnshadedCitadelOptions(UnshadedCitadel modInstance)
     {
-        Logger = loggerSource;
         PlayerSpeed = this.config.Bind<float>(
             "PlayerSpeed",
             1f,
