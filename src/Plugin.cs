@@ -18,7 +18,7 @@ public class UnshadedCitadel : BaseUnityPlugin
 {
     public const string PluginGUID = "alextabitha.unshadedcitadel";
     public const string PluginName = "Unshaded Citadel";
-    public const string PluginVersion = "1.0.1";
+    public const string PluginVersion = "2.0.0";
 
     private UnshadedCitadelOptions Options;
 

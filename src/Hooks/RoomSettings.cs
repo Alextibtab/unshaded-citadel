@@ -2,7 +2,7 @@ using UnshadedCitadel.Utils;
 
 namespace UnshadedCitadel.Hooks;
 
-public class RoomSettingsHook
+public class RoomSettingsHook : IHook
 {
     private Region Region;
 
@@ -25,12 +25,5 @@ public class RoomSettingsHook
         orig(self, name, region, template, firstTemplate, playerChar);
 
         self.pal = 33;
-
-        int fadeScreens = self.fadePalette.fades.Length;
-        self.fadePalette = new RoomSettings.FadePalette(12, fadeScreens);
-        for (int i = 0; i < fadeScreens; i++)
-        {
-            self.fadePalette.fades[i] = 0.15f;
-        }
     }
 }
